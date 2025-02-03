@@ -1,0 +1,26 @@
+
+.square {
+    color: black;
+    background-color: inherit;
+    font-size: 24px;
+    border: none;
+    display: block;
+    height: 48px;
+    width: 48px;
+    line-height: 48px;;
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px 0 0 1px;
+}
+
+.board-row:first-of-type .square {
+    border-top-width: 0;
+}
+
+.square:first-child {
+    border-left-width: 0;
+}
+
+.board-row {
+    display: flex;
+}
