@@ -9,16 +9,16 @@ enum Mark {
   O = "O",
 }
 
-enum Action {
-  Mark1 = 0,
+export enum Action {
+  Mark0 = 0,
+  Mark1,
   Mark2,
   Mark3,
   Mark4,
   Mark5,
   Mark6,
   Mark7,
-  Mark8,
-  Mark9
+  Mark8
 }
 
 type ActionStrings = keyof typeof Action
