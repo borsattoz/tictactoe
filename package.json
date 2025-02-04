@@ -6,7 +6,8 @@
   "author": "borsattoz",
   "type": "module",
   "scripts": {
-    "build": "npx rollup -cw",
+    "build": "npx rollup -c",
+    "build-watch": "npx rollup -cw",
     "start": "npx web-dev-server --node-resolve --open --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
