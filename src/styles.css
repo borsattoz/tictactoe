@@ -1,26 +1,37 @@
+:root {
+    --square-side: 64px;
+    --mark-size: calc(var(--square-side) / 2);
+    --border-width: 1px;
+}
 
-.square {
-    color: black;
-    background-color: inherit;
-    font-size: 24px;
-    border: none;
-    display: block;
-    height: 48px;
-    width: 48px;
-    line-height: 48px;;
-    border-style: solid;
-    border-color: grey;
-    border-width: 1px 0 0 1px;
+* {
+    text-align: center;
+}
+
+.board-row {
+    width: calc(3 * var(--square-side));
+    display: flex;
+    margin: 0 auto;
 }
 
 .board-row:first-of-type .square {
     border-top-width: 0;
 }
 
-.square:first-child {
-    border-left-width: 0;
+.square {
+    color: black;
+    background-color: inherit;
+    font-size: var(--mark-size);
+    border: none;
+    display: block;
+    height: var(--square-side);
+    width: var(--square-side);
+    line-height: var(--square-side);
+    border-style: solid;
+    border-color: grey;
+    border-width: var(--border-width) 0 0 var(--border-width);
 }
 
-.board-row {
-    display: flex;
+.square:first-child {
+    border-left-width: 0;
 }
