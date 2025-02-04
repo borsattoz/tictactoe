@@ -1,4 +1,5 @@
 import commonjs from '@rollup/plugin-commonjs';
+import { copy } from '@web/rollup-plugin-copy';
 import css from 'rollup-plugin-import-css';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
@@ -20,6 +21,11 @@ export default {
 	commonjs(),
 	css({
 	    inject: true
+	}),
+	copy({
+	    rootDir: 'src',
+	    patterns: '*.html',
+	    exclude: '',
 	}),
     ]
 };
