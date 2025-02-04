@@ -69,11 +69,11 @@ export class State extends Array<Mark> {
 
   private mark(mark: Mark, n: number): number {
     if (mark === Mark.Empty) {
-      throw new RangeError('invalid `mark`');
+      throw RangeError('invalid `mark`');
     }
 
     if (n < 1 || n > 3) {
-      throw new RangeError('`n` not between 1 and 3');
+      throw  RangeError('`n` not between 1 and 3');
     }
 
     const haystacks: Array<Array<Mark>> = [
